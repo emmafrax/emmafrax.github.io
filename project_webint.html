@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Emma Fraxanet</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+
+					<header id="header">
+						<a href="index.html" class="logo"><strong>EMMA FRAXANET</strong> <span>'s portfolio</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="project_tfg.html">Bachelor Thesis </a></li>
+							<li><a href="project_webint.html">AFTER Popcorn</a></li>
+							<li><a href="project_data.html">Signed networks</a></li>
+							<li><a href="project_tfm.html">Master Thesis</a></li>
+						</ul>
+
+					</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/pic02.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h1>AFTER Popcorn Project</h1>
+							</header>
+							<div class="content">
+								<p>Group project for the Web Intelligence course in the Master for Intelligent Systems (UPF) <br />
+								in collaboration with <a href="https://github.com/david8more"> David Moreno Esteban.</a></p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h2>Introduction</h2>
+									</header>
+									<p>The aim of this project is to provide a broad understanding on how mainstream audiovisual content is perceived by the audience on the internet.<br />
+										It is known that people feels more free when expressing their opinions on the social networks or virtual forums. It would also be a cheaper approach, both economically and energetically, for audiovisual content platforms such as Netflix to rate the success of a show through a study of this kind rather than paying for the developement and distribution of polls. In the long run this could also help in taking more voices into account when considering whether a show will continue or will be cancelled, since at the moment the platforms are putting a pause on shows that have a great and relevant response in social media. However, the methods used have to be finely tuned in order to produce the desired results.<br />
+
+										This projects combines different parts that correspond to the different skills and topics we covered in the Web Intelligence class. </p>
+									<ul class="actions">
+										<li><a href="https://colab.research.google.com/drive/1PqxTCflHljONh-Nj9IyNxPegrdPopaTA?usp=sharing" class="button">Check the code here!</a></li>
+									</ul>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="spotlights">
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/pic08.jpg" alt="" data-position="center center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>1. Twitter reception of a weekly show: Topic Modelling</h3>
+											</header>
+											<p>The first idea is to detect a relevant weekly show in the Twitter platform through a topic modelling analysis and proceed to analyse the reception of said show. <br />
+											For this purpose, data was retrieved every friday from Twitter using <a href="https://www.tweepy.org/"> Tweepy.</a><br />
+											The topic modelling analysis is based on a thorough cleanse and preparation of the text (Most and least frequent words, stopwords, usernames, application of bigram and trigram models, lemmatization...) together with the application of an <a href="http://mallet.cs.umass.edu/"> LDA Mallet Model</a> and a coherence study. This returns the optimal number of topics for this tweet dataset and their most representative keywords.   </p>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/pic09.jpg" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>2. Twitter reception of a weekly show: Sentiment Analysis</h3>
+											</header>
+											<p>Following the previous study, a sentiment analysis algorithm is applied to the text in order to categorize the reception. In this case we used the <a href="https://github.com/cjhutto/vaderSentiment"> VADER</a> scores to create a metric system that represented the reception. However, a confusion between the contextual "bad" or "good" words of the episode and those regarding the opinion of the viewers was clearly present.  For example, if an episode is about death or sadness, a review could want to express excellence, but the words death and sadness will boycott this positive comment in the current approach. For future work we leave the analysis of which are the words that might bias or distort the sentiment analysis. Testing the analysis with bigrams or trigrams might clarify this dark spots. Removing the "emotional" keywords inherent the context of a movie could also be an option. </p>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>3. Film Reception Analysis</h3>
+											</header>
+											<p>The second idea is to capture the differences in the users opinions regarding mainstream movies in different platforms. We aimed to compare how the users of different platforms such as YouTube, Reddit or IMDB received different films. We followed the same process as the last section from datasets extracted with the <a href="https://developers.google.com/youtube/v3"> youtube-data-api</a>, <a href="https://praw.readthedocs.io/en/latest/"> praw</a> and a manual coded crawler with <a href="https://selenium-python.readthedocs.io/"> Selenium</a> and <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"> Beautiful Soup</a> for IMDB. To carry out this study, we chose the highest grossing films of the recent years ( Tenet, The Martian, Avengers:Endgame...). The study compared the mean and variance of the compound value given by VADER per platform, the number of positive, negative and neutral comments per platform and the proportion of positive, negative and neutral words per comment. We observed comments in social network platforms tend to produce a more neutral sentiment result.</p>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/tenet.jpg" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>4. Correlation wikipedia pageviews</h3>
+											</header>
+											<p> Finally, fo the third part the main concept is to analyse how do people react to movies that contain specific knowledge, being it scientific or historical, through the correlation between the respective pageviews behaviour through time in wikipedia. This gives an idea on the the impact of the films in the search of topics related to them. For example, for the movie Tenet we wondered if people tried to understand what entropy was more often during the release of the movie. This is interesting because the choice of topics in a film or a show can have an impact on society's interests, and for that you just have to see how many more chess boards have been sold after the show The Queen's Gambit. </p>
+										</div>
+									</div>
+								</section>
+							</section>
+
+
+					</div>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="mailto: emmafraxanet@gmail.com " class="icon solid alt fa-envelope"><span class="label">Twitter</span></a></li>
+								<li><a href="https://github.com/emmafrax" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/emmafrax/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
