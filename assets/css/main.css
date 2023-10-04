@@ -330,6 +330,27 @@ input, select, textarea {
 	hr {
 		border-bottom-color: rgba(255, 255, 255, 0.35);
 	}
+	
+#cta ul {
+  text-align: left; /* Align the text within the list to the left */
+  margin-left: 20px; /* Add some left margin for indentation */
+}
+
+#cta li {
+  text-align: left; /* Align the text within each list item to the left */
+  margin-bottom: 10px; /* Add some spacing between list items */
+}
+
+/* Style for bullet points in the "What's going on?" section */
+#second ul {
+  text-align: left; /* Align the text within the list to the left */
+  margin-left: 20px; /* Add some left margin for indentation */
+}
+
+#second li {
+  text-align: left; /* Align the text within each list item to the left */
+  margin-bottom: 10px; /* Add some spacing between list items */
+}
 
 /* Row */
 
@@ -2812,13 +2833,29 @@ input, select, textarea {
 		padding: 0;
 		list-style: none;
 	}
-
+		
 		.features li {
 			width: calc(33.33333% - 2em);
 			margin-left: 2em;
 			margin-top: 3em;
 			padding: 0;
 		}
+
+
+		.image {
+		  display: inline-block;
+		  border: 2px solid #D3D3D3; /* You can adjust the border style and color */
+		  border-radius: 50%; /* Make the frame round */
+		  padding: 5px; /* Adjust padding as needed */
+		}
+
+		.image img {
+		  display: block;
+		  width: 300px; /* Adjust the image size as needed */
+		  height: 300px; /* Adjust the image size as needed */
+		}
+
+
 
 			.features li:nth-child(1), .features li:nth-child(2), .features li:nth-child(3) {
 				margin-top: 0;
@@ -2967,6 +3004,8 @@ input, select, textarea {
 				}
 
 		}
+		
+
 
 /* Spotlight */
 
@@ -3004,11 +3043,13 @@ input, select, textarea {
 			border-radius: 100%;
 			border: solid 1px;
 		}
+	
 
 			.spotlight .image img {
 				display: block;
 				border-radius: 100%;
 				width: 16em;
+				height: auto;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -3446,7 +3487,7 @@ input, select, textarea {
 
 		#main input[type="text"],
 		#main input[type="password"],
-		#main input[type="email"],
+		#main input[type="ema"],
 		#main select,
 		#main textarea {
 			background-color: rgba(222, 222, 222, 0.25);
